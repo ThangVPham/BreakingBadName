@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  background:
+    /* top, transparent black, faked with gradient */
+    linear-gradient(rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.4)),
+    /* bottom, image */
+    url("./bb_bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
