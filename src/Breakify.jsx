@@ -30,8 +30,8 @@ const Button = styled.button`
 function Breakify() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [firstNameResult, setFirstNameResult] = useState([]);
-  const [lastNameResult, setLastNameResult] = useState([]);
+  const [firstNameResult, setFirstNameResult] = useState(["", "Br", "eaking"]);
+  const [lastNameResult, setLastNameResult] = useState(["", "Ba", "d"]);
 
   return (
     <div className="flex flex-col items-center mt-32 w-full">
