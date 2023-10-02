@@ -8,8 +8,8 @@ body {
   height: 100vh;
   background:
     /* top, transparent black, faked with gradient */
-    linear-gradient(rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.4)),
+    linear-gradient(90deg, rgb(0, 0, 0),
+      rgba(0, 0, 0, 0)),
     /* bottom, image */
     url("./bb_bg.jpg");
   background-position: center;

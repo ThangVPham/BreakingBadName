@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styled from "styled-components";
 import checkName from "./checkName.jsx";
 
@@ -28,6 +28,7 @@ const Button = styled.button`
 `;
 
 function Breakify() {
+  const secondInput = useRef();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [firstNameResult, setFirstNameResult] = useState(["", "Br", "eaking"]);
@@ -60,6 +61,11 @@ function Breakify() {
             onChange={(e) => {
               setFirstName(e.target.value);
             }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                secondInput.current.focus();
+              }
+            }}
           />
         </div>
         <div className="rounded-sm mx-auto">
@@ -74,6 +80,13 @@ function Breakify() {
             onChange={(e) => {
               setLastName(e.target.value);
             }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                checkName(firstName, setFirstNameResult);
+                checkName(lastName, setLastNameResult);
+              }
+            }}
+            ref={secondInput}
           />
         </div>{" "}
         <Button

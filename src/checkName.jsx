@@ -1,6 +1,7 @@
 import elementSymbols from "./elements";
 
 export default function checkName(name, setName) {
+  console.log(name);
   const charArray = name.split("");
   let symbolFound = false;
   if (elementSymbols.includes(`${charArray[0].toUpperCase()}${charArray[1]}`)) {
